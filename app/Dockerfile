@@ -6,6 +6,8 @@ ENV NODE_PATH /opt/server/node_modules
 
 WORKDIR /opt/server
 
+EXPOSE 3001
+
 CMD ["node"]
 
 #production

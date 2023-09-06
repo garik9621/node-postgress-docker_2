@@ -15,7 +15,7 @@ services:
     env_file:
       - .env
     expose:
-      - '3000'
+      - '3001:3001'
     depends_on:
       - db
     command: npm run start
@@ -41,7 +41,7 @@ services:
       - pgadmin
     image: nginx:latest
     ports:
-      - '80:80'
+      - '81:81'
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./static:/var/www/static
@@ -57,5 +57,5 @@ services:
       PGADMIN_DEFAULT_EMAIL: info@proglib.io
       PGADMIN_DEFAULT_PASSWORD: qwertyuiop
     expose:
-      - '80'
+      - '81'
     restart: always
